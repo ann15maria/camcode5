@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp"
+    tools:context="com.example.admin.barcodedetection.MainActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <Button
+                android:id="@+id/bt_selectcamera"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Open Camera"
+                android:layout_gravity="center_horizontal"
+                android:onClick="cameraHandler"/>
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+                    <ImageView
+                        android:id="@+id/iv_img1"
+                        android:layout_width="200dp"
+                        android:layout_height="200dp"
+                        android:layout_margin="5dp" />
+
+                    <ImageView
+                        android:id="@+id/iv_imgGray"
+                        android:layout_width="200dp"
+                        android:layout_height="200dp"
+                        android:layout_margin="5dp" />
+
+                    <ImageView
+                        android:id="@+id/iv_imgGrad"
+                        android:layout_width="200dp"
+                        android:layout_height="200dp"
+                        android:layout_margin="5dp" />
+
+                    <ImageView
+                        android:id="@+id/iv_imgBlurr"
+                        android:layout_width="200dp"
+                        android:layout_height="200dp"
+                        android:layout_margin="5dp" />
+
+                    <ImageView
+                        android:id="@+id/iv_imgTreshold"
+                        android:layout_width="200dp"
+                        android:layout_height="200dp"
+                        android:layout_margin="5dp" />
+
+                    <ImageView
+                        android:id="@+id/iv_imgClosed"
+                        android:layout_width="200dp"
+                        android:layout_height="200dp"
+                        android:layout_margin="5dp" />
+
+                    <ImageView
+                        android:id="@+id/iv_imgContour"
+                        android:layout_width="200dp"
+                        android:layout_height="200dp"
+                        android:layout_margin="5dp" />
+
+                </LinearLayout>
+            </HorizontalScrollView>
+
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_data"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_gravity="center_horizontal"
+                android:text=" "/>
+
+            <ListView
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:nestedScrollingEnabled="true"
+                android:id="@+id/lst1"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_gravity="bottom"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Total Price : "
+                    android:id="@+id/tv_totalpriceDisplay1"
+                    android:textStyle="bold"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textStyle="bold"
+                    android:textSize="20sp"
+                    android:id="@+id/tv_totalPrice1" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_gravity="bottom"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Items Purchased : "
+                    android:id="@+id/tv_itemPurchasedDisplay1"
+                    android:textStyle="bold"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textStyle="bold"
+                    android:textSize="20sp"
+                    android:id="@+id/tv_itemPurchased1" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</LinearLayout>
